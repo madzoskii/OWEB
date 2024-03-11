@@ -1,0 +1,9 @@
+<div [ngClass]="klasi()"> 
+    <div class="course-title"> {{reden+'.'+vozac.name}}
+    </div>
+    <ng-template #noImg>Nema slika</ng-template>
+    <img class="course-card img" [src]="vozac.iconUrl" *ngIf="vozac.iconUrl; else noImg">
+    <div [ngStyle]="stil2()"> {{vozac.points}}</div>
+    <div id="category">{{vozac.category}}</div>
+    <button (click)="klik()" [ngStyle]="stil()">Klikni</button>
+</div>
